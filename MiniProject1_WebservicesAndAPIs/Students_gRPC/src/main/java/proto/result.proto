@@ -1,0 +1,27 @@
+syntax = "proto3";
+package com.students_management.stubs.result;
+option java_multiple_files = true;
+
+message ResultRequest{
+  string student_id = 1;
+}
+
+message ResultResponse{
+  string student_id = 1;
+  Semester sem = 2;
+  Grade billedkunst = 3;
+  Grade geografi = 4;
+  Grade haendarbejde = 5;
+}
+enum Semester{
+  SEM1 = 0;
+  SEM2 = 1;
+  SEM3 = 2;
+}
+enum Grade{
+  PASSED = 0;
+  NOTPASSED = 1;
+}
+service ResultService{
+  rpc getResultForStudent(ResultRequest) returns (ResultResponse);
+}

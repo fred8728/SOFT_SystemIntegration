@@ -1,0 +1,33 @@
+syntax = "proto3";
+package com.students_management.stubs.student;
+option java_multiple_files = true;
+message StudentRequest{
+  string student_id = 1;
+}
+message StudentResponse{
+  string student_id = 1;
+  string name = 2;
+  int32 age = 3;
+  Gender gender = 4;
+  Semester sem = 5;
+  Grade billedkunst = 6;
+  Grade geografi = 7;
+  Grade haendarbejde = 8;
+}
+enum Semester{
+  SEM1 = 0;
+  SEM2 = 1;
+  SEM3 = 2;
+}
+enum Grade{
+  PASSED = 0;
+  NOTPASSED = 1;
+}
+enum Gender{
+  MALE = 0;
+  FEMALE = 1;
+}
+
+service StudentService{
+  rpc getStudentInfo(StudentRequest) returns (StudentResponse);
+}
