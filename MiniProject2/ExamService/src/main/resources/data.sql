@@ -1,0 +1,17 @@
+INSERT INTO EXAM (sid, course, examtype, examdate) VALUES (1, 'SI', 'ORAL', '2021-01-01');
+INSERT INTO EXAM (sid, course, examtype, examdate) VALUES (2, 'SI', 'ORAL', '2021-01-02');
+INSERT INTO EXAM (sid, course, examtype, examdate) VALUES (3, 'SI', 'ORAL', '2021-01-03');
+INSERT INTO EXAM (sid, course, examtype, examdate) VALUES (4, 'SI', 'ORAL', '2021-08-01');
+INSERT INTO EXAM (sid, course, examtype, examdate) VALUES (5, 'SI', 'ORAL', '2021-08-02');
+INSERT INTO EXAM (sid, course, examtype, examdate) VALUES (6, 'SI', 'ORAL', '2021-08-03');
+INSERT INTO EXAM (sid, course, examtype, examdate) VALUES (7, 'SI', 'ORAL', '2021-08-04');
+INSERT INTO EXAM (sid, course, examtype, examdate) VALUES (8, 'DLS', 'WRITTEN', '2021-01-10');
+INSERT INTO EXAM (sid, course, examtype, examdate) VALUES (9, 'DLS', 'WRITTEN', '2021-01-11');
+INSERT INTO EXAM (sid, course, examtype, examdate) VALUES (10, 'DLS', 'WRITTEN', '2021-02-22');
+INSERT INTO EXAM (sid, course, examtype, examdate) VALUES (11, 'DLS', 'WRITTEN', '2021-02-23');
+INSERT INTO EXAM (sid, course, examtype, examdate) VALUES (12, 'DLS', 'WRITTEN', '2021-02-24');
+INSERT INTO EXAM (sid, course, examtype, examdate) VALUES (13, 'TEST', 'ORAL', '2021-02-06');
+INSERT INTO EXAM (sid, course, examtype, examdate) VALUES (14, 'TEST', 'ORAL', '2021-02-07');
+INSERT INTO EXAM (sid, course, examtype, examdate) VALUES (15, 'TEST', 'ORAL', '2021-05-08');
+INSERT INTO EXAM (sid, course, examtype, examdate) VALUES (16, 'TEST', 'ORAL', '2021-05-01');
+INSERT INTO EXAM (sid, course, examtype, examdate) VALUES (17, 'TEST', 'ORAL', '2021-05-01');
