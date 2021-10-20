@@ -1,7 +1,5 @@
-insert into student (sname, smail) values('Ronja', 'ro@mail.dk');
-insert into student (sname, smail) values('Bastian', 'ba@mail.dk');
-insert into student (sname, smail) values('Alice', 'al@mail.wld');
-insert into student (sname, smail) values('Bob', 'bo@bobov.dol');
-insert into student (sname, smail) values('Jonathan', 'jo@mail.us');
-insert into student (sname, smail) values('Frida', 'fri@mail.us');
-insert into student (sname, smail) values('Freya', 'fre@mail.us');
+INSERT INTO STUDENT (sid,name,email, gender, semester, si, test, dls) VALUES (1, 'Frederikke', ' email55@hotmail.com', 'FEMALE', 'SEM1', 'PASSED', 'PASSED', 'PASSED');
+INSERT INTO STUDENT (sid,name,email, gender, semester, si, test, dls) VALUES (2, 'Frederik', ' email44@hotmail.com', 'MALE', 'SEM2', 'PASSED', 'PASSED', 'NOTPASSED');
+INSERT INTO STUDENT (sid,name,email, gender, semester, si, test, dls) VALUES (3, 'Frederikka', ' email33@hotmail.com', 'FEMALE', 'SEM2', 'PASSED', 'PASSED', 'PASSED');
+INSERT INTO STUDENT (sid,name,email, gender, semester, si, test, dls) VALUES (4, 'Frede', ' email22@hotmail.com', 'MALE', 'SEM1', 'PASSED', 'NOTPASSED', 'NOTPASSED');
+INSERT INTO STUDENT (sid,name,email, gender, semester, si, test, dls) VALUES (5, 'Rikke', ' email11@hotmail.com', 'FEMALE', 'SEM3', 'PASSED', 'NOTPASSED', 'NOTPASSED');
