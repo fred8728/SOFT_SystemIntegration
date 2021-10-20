@@ -1,7 +1,8 @@
 package dk.si.school.schoolgateway.controller;
 
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
-import dk.si.school.schoolgateway.client.TeacherClient;
+import dk.si.school.schoolgateway.client.ExamClient;
+import dk.si.school.schoolgateway.model.Exam;
 import dk.si.school.schoolgateway.model.Teacher;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,20 +12,21 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.stream.Collectors;
 
-public class TeacherController {
-    private TeacherClient teacherClient = null;
+public class ExamController {
 
-    public TeacherController(TeacherClient teacherClient) {
-        this.teacherClient = teacherClient;
+    private ExamClient examClient = null;
+
+    public ExamController(ExamClient examClient) {
+        this.examClient = examClient;
     }
 
     @ResponseBody
     @CrossOrigin(origins = "*") // allow request from any client
     @HystrixCommand(fallbackMethod = "fallback") // in case of failure
-    @GetMapping("/teachers")
-    public Collection<Teacher> schoolTeachers()
+    @GetMapping("/exams")
+    public Collection<Exam> schoolExams()
     {
-        return teacherClient.readTeacher()
+        return examClient.readExams()
                 .getContent()
                 .stream()
                 .collect(Collectors.toList());
@@ -34,4 +36,5 @@ public class TeacherController {
     {
         return new ArrayList<>();
     }
+
 }

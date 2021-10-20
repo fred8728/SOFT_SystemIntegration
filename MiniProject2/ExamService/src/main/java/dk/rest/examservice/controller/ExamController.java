@@ -1,12 +1,9 @@
 package dk.rest.examservice.controller;
 
-import dk.rest.examservice.exceptions.ExamNotFoundException;
 import dk.rest.examservice.model.Exam;
 import dk.rest.examservice.repository.ExamRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.hateoas.EntityModel;
-import org.springframework.hateoas.Link;
-import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -16,9 +13,10 @@ import java.util.List;
 import java.util.Optional;
 
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
-import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 
-@RestController
+//@RestController
+@RepositoryRestResource
+@ResponseBody
 @RequestMapping("/exams")
 public class ExamController {
 
@@ -32,19 +30,9 @@ public class ExamController {
     }
 
     @GetMapping("/{id}")
-    public EntityModel<Exam> retrieveExam(@PathVariable int id)
+    public Optional<Exam> retrieveExam(@PathVariable int id)
     {
-        Optional<Exam> exam = repo.findById(id);
-        if(!exam.isPresent()){
-            throw new ExamNotFoundException("The given exam id: " + id);
-        }
-        EntityModel<Exam> resource = EntityModel.of(exam.get());
-        WebMvcLinkBuilder linkTo = linkTo(methodOn(this.getClass()).retrieveAllExams());
-        resource.add(linkTo.withRel("all-exams"));
-
-        Link selfLink = linkTo(methodOn(this.getClass()).retrieveExam(id)).withSelfRel();
-        resource.add(selfLink);
-        return resource;
+        return repo.findById(id);
     }
 
     @DeleteMapping("/{id}")
