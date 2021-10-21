@@ -35,10 +35,15 @@ public class StudentController {
         return repo.findById(id);
     }
 
-//    @GetMapping("/si")
-//    public List<Student> retrieveStudentWhoPassedCourse() {
-//        return (List<Student>) repo.findStudentsBySi_Passed();
-//    }
+    @GetMapping("/si/{status}")
+    public List<Student> retrieveStudentWhoPassedCourse(@PathVariable Status status) throws Exception {
+        List <Student> students = (List<Student>) repo.getStudentsBySi(status);
+        if(students.isEmpty() || students == null){
+            throw new Exception("No students passed SI");
+        }
+        return students;
+    }
+
 
     @DeleteMapping("/{id}")
     public void deleteStudent(@PathVariable long id) {
