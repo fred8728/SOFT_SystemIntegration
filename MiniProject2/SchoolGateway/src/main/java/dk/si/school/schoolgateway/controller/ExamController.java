@@ -20,6 +20,7 @@ public class ExamController {
         this.examClient = examClient;
     }
 
+
     @ResponseBody
     @CrossOrigin(origins = "*") // allow request from any client
     @HystrixCommand(fallbackMethod = "fallback") // in case of failure

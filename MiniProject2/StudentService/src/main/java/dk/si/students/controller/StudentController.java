@@ -1,5 +1,6 @@
 package dk.si.students.controller;
 
+import dk.si.students.model.Status;
 import dk.si.students.model.Student;
 import dk.si.students.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,6 +34,11 @@ public class StudentController {
     {
         return repo.findById(id);
     }
+
+//    @GetMapping("/si")
+//    public List<Student> retrieveStudentWhoPassedCourse() {
+//        return (List<Student>) repo.findStudentsBySi_Passed();
+//    }
 
     @DeleteMapping("/{id}")
     public void deleteStudent(@PathVariable long id) {

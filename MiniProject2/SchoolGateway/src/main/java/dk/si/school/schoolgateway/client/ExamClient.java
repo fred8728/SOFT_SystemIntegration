@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @CrossOrigin
-@FeignClient("exam-info")
-@RibbonClient(name="exam-info", configuration = RibbonConfig.class)
+@FeignClient("exam")
+@RibbonClient(name="exam", configuration = RibbonConfig.class)
 public interface ExamClient {
     @GetMapping("/exams")
     Resources<Exam> readExams();

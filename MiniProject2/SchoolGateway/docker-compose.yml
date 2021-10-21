@@ -1,0 +1,19 @@
+version: "3.9"
+services:
+  exam:
+    build: ../ExamService
+    ports:
+      - "8050:8080"
+  schoolgateway:
+    build: .
+    ports:
+      - "8060:8080"
+  student:
+    build: ../StudentService
+    ports:
+      - "8070:8080"
+
+  teacher:
+    build: ../TeacherService
+    ports:
+      - "8040:8080"
