@@ -9,10 +9,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.hateoas.Resources;
 
 @CrossOrigin
-@FeignClient("teacher")
-@RibbonClient(name="teacher", configuration = RibbonConfig.class)
-public interface TeacherClient
-{
+@FeignClient("teacher-info")
+@RibbonClient(name="teacher-info", configuration = RibbonConfig.class)
+public interface TeacherClient{
     @GetMapping("/teachers")
     Resources<Teacher> readTeacher();
 }

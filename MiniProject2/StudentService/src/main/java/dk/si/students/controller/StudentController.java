@@ -4,6 +4,7 @@ import dk.si.students.model.Status;
 import dk.si.students.model.Student;
 import dk.si.students.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -14,14 +15,15 @@ import java.util.Optional;
 
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 
-@RestController
+@RepositoryRestResource
+@ResponseBody
 @RequestMapping("students")
 public class StudentController {
 
     @Autowired
     StudentRepository repo;
 
-    @GetMapping("/")
+    @GetMapping("/all")
     public List<Student> retrieveAllStudents()
     {
         return repo.findAll();
@@ -43,7 +45,6 @@ public class StudentController {
         }
         return students;
     }
-
 
     @DeleteMapping("/{id}")
     public void deleteStudent(@PathVariable long id) {

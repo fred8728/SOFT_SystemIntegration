@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>dk.si</groupId>
-    <artifactId>teacher</artifactId>
+    <artifactId>teacher-info</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>teacher</name>
     <description>teacher</description>

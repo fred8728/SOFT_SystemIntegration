@@ -19,7 +19,7 @@ public class TeacherController {
     @Autowired
     TeacherRepository repo;
 
-    @GetMapping("/")
+    @GetMapping("/all")
     public List<Teacher> retrieveAllTeachers(){
         return repo.findAll();
     }

@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>dk.rest</groupId>
-    <artifactId>exam</artifactId>
+    <artifactId>exam-info</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>ExamService</name>
     <description>ExamService</description>

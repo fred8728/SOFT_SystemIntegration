@@ -8,9 +8,9 @@ import lombok.RequiredArgsConstructor;
 import javax.persistence.*;
 
 @Data
-@Entity
 @NoArgsConstructor
 @RequiredArgsConstructor
+@Entity
 public class Teacher {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
