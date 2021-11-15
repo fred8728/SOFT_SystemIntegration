@@ -18,14 +18,6 @@ public class LoanPublisher {
     @Autowired
     private RabbitTemplate template;
 
-    @PostMapping("/publishLoan")
-    public String publishLoan(@RequestBody Loan loan){
-        loan.setLoanId(UUID.randomUUID().toString());
-        template.convertAndSend(MQConfig.EXCHANGE,
-                MQConfig.ROUTING_KEY, loan);
-        return "Loan is published";
-    }
-
     @PostMapping("/publishCustom")
     public String customLoan(@RequestBody Loan loan){
         loan.setLoanId(UUID.randomUUID().toString());

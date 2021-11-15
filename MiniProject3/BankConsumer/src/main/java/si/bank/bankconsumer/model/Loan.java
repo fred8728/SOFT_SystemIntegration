@@ -1,9 +1,10 @@
-package si.bank.bankconsumer;
+package si.bank.bankconsumer.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+import si.bank.bankconsumer.model.Bank;
 
 @Data
 @NoArgsConstructor

@@ -1,4 +1,4 @@
-package si.bank.bankconsumer;
+package si.bank.bankconsumer.config;
 
 
 import org.springframework.amqp.core.*;
