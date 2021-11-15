@@ -12,9 +12,9 @@ import javax.persistence.Id;
 import java.util.Date;
 
 @Data
+@Entity
 @NoArgsConstructor
 @RequiredArgsConstructor
-@Entity
 public class Exam {
 
     @Id
